@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            padding:0px;
+            margin:0px;
+            box-sizing: border-box;
+        }
+        .container
+        {
+            background:rgb(1, 58, 114);
+            height:100vh;
+            width:100%;
+            background-size:cover;
+            background-position:center;
+        }
+        .form
+        {
+            position:absolute;
+            top:5%;
+            left:30%;
+            height:90%;
+            width:50%;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: white;
+            padding:10px;
+            border-radius:15px;
+        }
+        .form h1
+        {
+            text-align:center;
+            background:rgb(1, 58, 114);
+            padding:10px;
+            border-radius:10px;
+            margin-top:10px;
+            width:70%;
+            margin-left:70px;
+            color:white;
+        }
+        .form input
+        {
+            margin-left:30px;
+            width:250px;
+            padding:8px;
+            outline:none;
+            border-radius:10px;
+            margin-top:20px;
+        }
+        .form span
+        {
+            margin-left:50px;
+        }
+        #radio input
+        {
+            width:40px;
+            padding:2px;
+            margin-left:20px;
+        }
+        .form select
+        {
+            margin-left:30px;
+            width:250px;
+            padding:10px;
+            margin-top:20px;
+            outline:none;
+            border-radius:10px;
+        }
+        .button
+        {
+            display:flex;
+            align-items: center;
+            width:250px;
+            padding:10px;
+            margin-left:130px;
+            border:0px;
+        }
+        #one
+        {
+            background-color:green;
+            color:white;
+            cursor:pointer;
+        }
+        #two
+        {
+            background-color:orangered;
+            color:white;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="form">
+        <h1>Register Here</h1>
+            <span>First-Name:</span>
+            <input type="text" placeholder="enter your first name" id="user"></br>
+            <span>Last-Name:</span>
+            <input type="text" placeholder="enter your last name" id="userl"><br>
+            <span>Date Of Birth:</span>
+            <input type="date" id="date"><br>
+            <span>country:</span>
+            <select id="country" required >
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Newzland">Newzand</option>
+                <option value="Austraila">Austraila</option>
+            </select><br>
+            <div id="radio" >
+               <span>Gender:</span>
+               <input type="radio" value="Male" name="gender"  id="radio"> <span>Male</span>
+               <input type="radio" value="Female" name="gender"> <span>Female</span><br>
+            </div>
+            <span>Profision:</span>
+            <input type="text" placeholder="profession" id="prof"><br>
+            <span>MobileNumber:</span>
+            <input type="number" placeholder="enter your mobile number" id="number"><br>
+            <span>E-mail:</span>
+            <input type="email" placeholder="enter your mail"  id="email"><br>
+            <div class="button">
+                <input type="button" value="submit" id="one"   onclick="submit()">
+                <input type="button" value="reset" id="two">
+            </div> 
+       </div>
+    </div>
+          <script>
+                 let user=document.getElementById("user");
+                 let userl=document.getElementById("userl");
+                 let date=document.getEementById("date");
+                 let radio=document.getEementById("radio");
+                 let prof=document.getEementById("prof");
+                 let number=document.getEementById("number");
+                 let email=document.getEementById("email");
+                 function submit()
+                 {
+                    if(user.value == "" || userl.value== "" || date.value == " " || radio.value == " "|| prof.value == " "
+                     || number.value== "" || email.value == "")
+                     {
+                          alert("please fill required fields before submission");
+                     }
+                     else
+                     {
+                        alert("Submision successfull");
+                     }
+                 }
+          </script>
+</body>
+</html>
